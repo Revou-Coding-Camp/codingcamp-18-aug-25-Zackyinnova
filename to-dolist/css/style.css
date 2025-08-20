@@ -8,6 +8,7 @@ body{
     color: white;
     font-family: "Poppins", sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -52,7 +53,6 @@ input::placeholder{
 form{
     display: flex;
     gap: 10px;
-    
     width: 524px;
     justify-content: center;
 }
@@ -95,38 +95,118 @@ form > button{
     height: 34px;
 }
 
-.table-todo{
+.table-todo {
+  width: 524px;
+  border-collapse: collapse;   /* rapihin border */
+  border: 1px solid #996DFF;
+  border-radius: 8px;
+  background-color: #0F1729;
+  table-layout: auto;          /* biar lebar kolom menyesuaikan isi */
+}
+
+/* untuk semua sel */
+.table-todo th,
+.table-todo td {
+  border: 1px solid #996DFF;
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: middle;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 180px;            /* biar teks panjang patah, bukan ngelebarin kolom */
+}
+
+/* header */
+.table-todo thead th {
+  font-weight: 600;
+  background-color: #333A49;
+  color: white;
+  text-align: center;
+}
+
+/* tbody */
+.table-todo tbody tr:nth-child(even) {
+  background-color: #1a2235;   /* striping row */
+}
+.table-todo tbody tr:hover {
+  background-color: #2a3245;   /* highlight saat hover */
+}
+
+/* tombol edit */
+.table-todo .btn-edit {
+  background-color: #996DFF;
+  border: none;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.table-todo .btn-edit:hover {
+  background-color: #7b52cc;
+}
+
+
+
+
+.container-edit{
+    border: 1px solid #828282;
+    border-radius: 7px;
+    height: auto;
+    padding: 20px;
+    width: 600px;
+    margin-top: 10px;
+    background-color: #333A49;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+/* saat aktif, tampil sebagai flex */
+.container-edit.show {
+  display: flex;
+}
+
+
+.header-edit{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.container-edit form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 524px;
+    padding-top: 10px;
+}
+
+form > select{
+    all: unset;
+    height: 34px;
     width: 510px;
-    border-radius: 8px;
-    border: 1px solid white;
-    height: 500px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border: 1px solid #996DFF;
     background-color: #0F1729;
-    table-layout: fixed;
+    border-radius: 7px;
 }
 
-.table-todo tbody {
-    border: 1px solid white;
-    width: 410px;
-    display: block; 
-  
-}
-
-.table-todo tbody tr{
+.btn-editnow{
+    color: white;
+    height: 40px;
     width: 100%;
-}
-
-.table-todo tbody td{
-   max-width: 131px;
-   font-size: 12px;
-   border: 1px solid white;
-   word-wrap: break-word;
-   padding-left: 10px;
-   padding-right: 10px;
-   text-align: center;
-
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
 }
 
 
+.input-action{
+    width: 510px;
+}
 
 
 /*section for icon*/

@@ -1,73 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Dolist Revou</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Dolist Revou</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container-body">
-        <div class="header"> To-Do list</div>
+  <div class="container-body">
+        <div class="header">To-Do list</div>
 
-        
-        <form>
-            <input type="text" placeholder="add a todo..." name="input-todo">
-
-            <input type="date">
-
-            <button><span class="ic--round-plus"></span> </button>
+        <form id="taskForm">
+        <input type="text" id="Task" placeholder="add a todo..." name="input-todo" required>
+        <input type="date" id="date" required>
+        <button type="submit"><span class="ic--round-plus"></span></button>
         </form>
 
         <div class="regulator-data">
-            <button class="btn-filter">Filter</button>
-
-            <button class="btn-deleteall">Delete All</button>
+        <button class="btn-filter" type="button">Filter</button>
+        <button class="btn-deleteall" type="button" id="deleteAll">Delete All</button>
         </div>
 
-        <table class="table-todo border="1">
-            <thead>
-                <tr>
-                    <th>Task</th>
-                    <th>Due Date</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-
-            
-            <tbody>
-                <tr>
-                    <td>asdasdasdassssaaaaaaassssssss</td>
-                    <td>asddddddddd</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>asdasdasdassssaaaaaaassssssss</td>
-                    <td>asddddddddd</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>asdasdasdassssaaaaaaassssssss</td>
-                    <td>asddddddddd</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-
-                
-            </tbody>
+        <table class="table-todo" border="1" id="table-todo">
+        <thead>
+            <tr>
+            <th>Task</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Action</th>
+            <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody id="todo-body"></tbody>
         </table>
     </div>
 
+  <!--berfungsi untuk mengedit table-->
+    <div class="container-edit" id="editPanel">
+    <div class="header-edit">Edit To-Do list</div>
+    <form id="editForm">
+        <select name="Status" id="editStatus">
+        <option value="Pekerjaan Selesai" class="status-selesai">Pekerjaan Selesai</option>
+        <option value="Pekerjaan Belum Selesai" class="status-nonselesai">Pekerjaan Belum Selesai</option>
+        </select>
 
+        <input type="text" placeholder="Input Action" class="input-action" id="editAction">
+
+        <button type="submit" class="btn-editnow">Edit Now</button>
+    </form>
+    </div>
+
+
+  <script src="js/script.js"></script>
 </body>
 </html>
