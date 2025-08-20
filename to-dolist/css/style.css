@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0F1729;
+    margin: 0;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-body{
+    border: 1px solid white;
+    width: 600px;
+    height: 500px;
+    border: 1px solid #828282;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333A49;
+    justify-content: center;
+}
+
+.header{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+input{
+    all: unset;
+    background-color: #0F1729;
+    border: 1px solid #996DFF;
+    width: 220px;
+    height: 34px;
+    padding-left: 10px;
+    padding-left: 10px;
+    border-radius: 8px;
+    color: white;
+}
+
+input::placeholder{
+    color: white;
+}
+
+form{
+    display: flex;
+    gap: 10px;
+    
+    width: 524px;
+    justify-content: center;
+}
+
+form > button{
+    border: none;
+    border-radius: 8px;
+    background-color: #996DFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+
+}
+
+.regulator-data{
+    display: flex;
+    justify-content: space-between;
+    width: 524px;
+    height: auto;
+}
+
+.btn-filter{
+    all: unset;
+    background-color: #0F1729;
+    text-align: center;
+    align-items: center;
+    width: 100px;
+    height: 34px;
+    border-radius: 7px;
+}
+
+.btn-deleteall{
+    all: unset;
+    background-color: red;
+    text-align: center;
+    border-radius: 7px;
+    width: 100px;
+    height: 34px;
+}
+
+.table-todo{
+    width: 510px;
+    border-radius: 8px;
+    border: 1px solid white;
+    height: 500px;
+    background-color: #0F1729;
+    table-layout: fixed;
+}
+
+.table-todo tbody {
+    border: 1px solid white;
+    width: 410px;
+    display: block; 
+  
+}
+
+.table-todo tbody tr{
+    width: 100%;
+}
+
+.table-todo tbody td{
+   max-width: 131px;
+   font-size: 12px;
+   border: 1px solid white;
+   word-wrap: break-word;
+   padding-left: 10px;
+   padding-right: 10px;
+   text-align: center;
+
+}
+
+
+
+
+/*section for icon*/
+
+.ic--round-plus {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2'/%3E%3C/svg%3E");
+}
